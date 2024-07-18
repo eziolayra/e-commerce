@@ -1,38 +1,186 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
+body {
+  font-family: "Geologica", sans-serif;
+}
+
+/*Css of NavBar*/
+.Nav {
+  background-color: rgba(136, 127, 127, 0.662);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.Nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 22px;
+}
+
+.Nav-logo a,
+.Nav a {
+  cursor: pointer;
+  color: black;
+}
+
+.NavHome a {
+  margin: 0 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.NavHome a:hover {
+  text-decoration: underline;
+}
+
+/*Css for Homepages*/
+.HomePage {
+  padding-top: 40px;
   text-align: center;
+  background-color: #fff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.HomePage-image {
+  width: 90%;
+  height: 580px;
+  justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.HomePage-textbox {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5px;
+  position: absolute;
+  left: 50px;
+  top: 300px;
+  background-color: #fff;
+  padding: 50px;
+  text-align: start;
+  font-size: large;
+}
+.HomePage-textbox strong {
+  margin-bottom: 10px;
+}
+.HomePage-textbox a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.HomePage-textbox a:hover {
+  text-decoration: underline;
+}
+.HomePage-button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 110px;
+  top: 420px;
+  padding: 13px 18px;
+  text-align: start;
+}
+.HomePage-button button,
+.everyday-button button {
+  outline: none;
+  border: none;
+  background-color: white;
+  padding: 20px;
+  margin: 0 20px;
+  font-size: large;
+}
+.everyday-button button:hover,
+.HomePage-button button:hover {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.HomePage-button-text {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+.Hometext-st {
+  font-size: 20px;
+}
+.HomePage-button-text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.HomePage-button-button {
+  text-align: end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*CSS for ForEveryday*/
+.ForEveryday {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin-bottom: 50px;
+
+  .everyday-box {
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
-  to {
-    transform: rotate(360deg);
+  .everyday-box img {
+    z-index: -1;
+  }
+  .everyday-sub-box {
+    padding: 5px 50px;
+  }
+  .everyday-sub-box h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+  }
+  .img-wrapper {
+    position: relative;
+    &:hover {
+      .everyday-button {
+        opacity: 1;
+      }
+    }
+  }
+  .everyday-button {
+    opacity: 0;
+    inset: 0;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
   }
 }
+
+
+
+/*For CLient Favourite*/
+.ClientsFaviroute{
+  text-align: center;
+}
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.buttonContainer button{
+  border: none;
+  outline: none;
+  font-size: 24px;
+  background-color: transparent;
+}
+.buttonContainer button:hover{
+  text-decoration: underline;
+}
+.buttonContainer .tab.activeTab {
+  text-decoration: underline;
+}
+.ClientsFaviroute p{
+  font: bold;
+  font-size: 30px;
+}
+
+
