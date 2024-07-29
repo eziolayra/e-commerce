@@ -1,22 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
 body {
   font-family: "Geologica", sans-serif;
 }
 
+.twoImage-button button,
+.subimg-button button,
+.ProductBox-img button,
+.HomePage-button button,
+.product-button button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+  padding: 20px;
+  margin: 0 20px;
+  font-size: large;
+  border-radius: 5px;
+}
+.twoImage-button button:hover,
+.subimg-button button:hover,
+.ProductBox-img button:hover,
+.product-button button:hover,
+.HomePage-button button:hover {
+  background-color: black;
+  opacity: 0.7;
+  border: 1px solid #059669; 
+  color: white;
+}
+
 /*Css of NavBar*/
+.navContainer {
+  box-shadow: 0 1px 5px rgb(202, 200, 200);
+}
 .Nav {
-  background-color: rgba(136, 127, 127, 0.662);
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
-
 .Nav-logo {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
   font-size: 22px;
+}
+.nav-logo-search{
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 0 10px;
+}
+.nav-logo-search input{
+  outline: none;
 }
 
 .Nav-logo a,
@@ -29,120 +69,125 @@ body {
   margin: 0 20px;
   color: black;
   text-decoration: none;
+  
 }
 
 .NavHome a:hover {
   text-decoration: underline;
+  color: #059669; 
+}
+
+/*CSS for footer*/
+.footerContainer {
+  background-color: #212a2f;
+  color: #fff;
+}
+.footerform {
+  padding: 50px;
+}
+.footerform input {
+  height: 30px;
+  padding: 10px;
+  width: 15%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  background-color: rgb(77, 85, 89);
+  margin-right: 20px;
+}
+.footerform button {
+  height: 30px;
+  padding: 10px 20px 25px 20px;
+  background-color: rgb(77, 85, 89);
+  border: none;
+  cursor: pointer;
+  height: 4 0px;
 }
 
 /*Css for Homepages*/
 .HomePage {
-  padding-top: 40px;
-  text-align: center;
+  display: flex;
   background-color: #fff;
 }
+.HomeContainer .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+  top: 90%;
+}
+.HomeContainer .swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+}
+
 .HomePage-image {
-  width: 90%;
-  height: 580px;
+  object-fit: cover;
+  width: 100%;
+  height: 700px;
   justify-content: center;
 }
 .HomePage-textbox {
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  position: absolute;
-  left: 50px;
-  top: 300px;
   background-color: #fff;
   padding: 50px;
-  text-align: start;
-  font-size: large;
 }
 .HomePage-textbox strong {
-  margin-bottom: 10px;
+  font-size: 40px;
 }
-.HomePage-textbox a {
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
+.HomePage-textbox p {
+  font-size: 23px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
-.HomePage-textbox a:hover {
-  text-decoration: underline;
-}
-.HomePage-button {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  position: absolute;
-  right: 110px;
-  top: 420px;
-  padding: 13px 18px;
-  text-align: start;
-}
-.HomePage-button button,
-.everyday-button button {
+.HomePage-textbox button {
+  background-color: #729762;
   outline: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
   border: none;
-  background-color: white;
-  padding: 20px;
-  margin: 0 20px;
-  font-size: large;
+  color: #fff;
 }
-.everyday-button button:hover,
-.HomePage-button button:hover {
-  background-color: black;
-  color: white;
+.HomePage-textbox button:hover {
+  background-color: rgba(6, 215, 6, 0.851);
+  color: #fff;
 }
 
-.HomePage-button-text {
-  color: white;
-  text-align: center;
-  font-size: 50px;
-}
-.Hometext-st {
-  font-size: 20px;
-}
-.HomePage-button-text {
-  color: white;
-  text-align: center;
-  font-weight: bold;
-}
-.HomePage-button-button {
-  text-align: end;
-}
-
-/*CSS for ForEveryday*/
-.ForEveryday {
-  display: flex;
-  gap: 30px;
+/*CSS for Chinese*/
+.Chinese {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   background-color: #fff;
   margin-bottom: 50px;
 
-  .everyday-box {
-    background-color: white;
+  .product-box {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
-  .everyday-box img {
+  .product-box img {
     z-index: -1;
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
   }
-  .everyday-sub-box {
+  .product-sub-box {
     padding: 5px 50px;
-  }
-  .everyday-sub-box h2 {
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
   }
   .img-wrapper {
     position: relative;
     &:hover {
-      .everyday-button {
+      .product-button {
         opacity: 1;
       }
     }
   }
-  .everyday-button {
+  .product-button {
     opacity: 0;
     inset: 0;
     position: absolute;
@@ -154,33 +199,198 @@ body {
   }
 }
 
-
-
-/*For CLient Favourite*/
-.ClientsFaviroute{
+/*For Our Products*/
+.OurProducts {
+  margin-top: 50px;
   text-align: center;
 }
-.buttonContainer{
+.detail-slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.buttonContainer {
   display: flex;
   justify-content: center;
   gap: 50px;
   margin-bottom: 20px;
 }
-.buttonContainer button{
+.buttonContainer button {
   border: none;
   outline: none;
   font-size: 24px;
   background-color: transparent;
 }
-.buttonContainer button:hover{
+.buttonContainer button:hover {
   text-decoration: underline;
 }
 .buttonContainer .tab.activeTab {
   text-decoration: underline;
 }
-.ClientsFaviroute p{
-  font: bold;
-  font-size: 30px;
+
+/*Css for Slider*/
+.slider-cointainer {
+  .detail-slider {
+    position: relative;
+    margin-bottom: 90px;
+    &::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background: #445f39;
+    opacity: 0.5;
+    }
+  }
+  .detail-slider img {
+    width: 100%;
+    height: 500px;
+    display: block;
+  }
+  .detail-box {
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    inset: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+  .slider-img {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+  .slider-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider-swiper {
+    padding: 20px;
+  }
+  .slider-swiper h1 {
+    text-align: center;
+  }
+  .slider-img {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+  }
+  .slider-detail {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+  }
 }
 
+/*CSS of ProductBox*/
+.ProductBox {
+  display: flex;
+  padding: 20px;
+}
+.ProductBox-img {
+  position: relative;
+  width: 70%;
+  margin-right: 20px;
+}
+.ProductBox-img img {
+  width: 100%;
+  height: 99%;
+  object-fit: cover;
+}
+.productBox-text {
+  top: 73%;
+  color: white;
+  padding-left: 50px;
+}
+.productBox-button {
+  top: 86%;
+  padding-left: 30px;
+}
+.productBox-text,
+.productBox-button {
+  position: absolute;
+}
+.ProductBox-subimg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 70%;
+  margin-bottom: 10px;
+}
+.subimg-box {
+  background-color: rgb(245, 245, 245);
+  padding: 10px;
+}
+.subimg-box img {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+.subimg-price {
+  margin-left: 120px;
+}
+.subimg-text {
+  position: relative;
+  &:hover {
+    .subimg-button {
+      opacity: 1;
+    }
+  }
+}
+.subimg-button {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+/*CSS for TwoImage*/
+.twoImageContainer {
+  display: flex;
+  gap: 10px;
+}
+.twoImages {
+  width: 50%;
+  position: relative;
+}
+.twoImages img {
+  width: 200%;
+}
+.twoImage-text,
+.twoImage-button {
+  position: absolute;
+  text-align: center;
+  left: 80%;
+}
+
+.twoImage-text {
+  color: white;
+  top: 10%;
+}
+
+.twoImage-button {
+  top: 80%;
+  display: flex;
+}
+
+/*CSS for AboutHerbs*/
+.AboutHerbs {
+  .about-slider {
+    &::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background: #445f39;
+    opacity: 0.5;
+  }
+}
+}
 

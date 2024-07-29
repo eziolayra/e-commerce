@@ -1,11 +1,16 @@
 import React from 'react'
-import HomePage from '../HomeComponent/HomePage'
-import ClientsFaviroute from '../HomeComponent/ClientsFaviroute';
+import HomePage from '../Components/HomeComponent/HomePage'
+import OurProducts from '../Components/HomeComponent/OurProducts';
+import Slider from '../Components/HomeComponent/Slider';
+import ProductBox from '../Components/HomeComponent/ProductBox';
+
 const Home = () => {
   return (
     <div>
       <HomePage />
-      <ClientsFaviroute/>
+      <OurProducts/>
+      <Slider/>
+      <ProductBox/>
     </div>
   );
 }
