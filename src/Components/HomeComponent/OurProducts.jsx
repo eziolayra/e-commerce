@@ -72,7 +72,7 @@ const OurProducts = () => {
 
   return (
     <div className="OurProducts">
-      <p className="text-3xl mb-5">Our Herbs</p>
+      <p className="text-3xl mb-5 font-bold">Our Herbs</p>
       <div>
         <div className="buttonContainer">
           <button
@@ -94,7 +94,7 @@ const OurProducts = () => {
           Chinese
           </button>
         </div>
-        <div className="Chinese">
+        <div className="Chinese p-2">
           {filterData.map((data, index) => (
             <React.Fragment key={index}>
               {/* <ProductCard {...data}/> */}

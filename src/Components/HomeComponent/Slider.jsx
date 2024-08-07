@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -76,7 +76,7 @@ const Slider = () => {
   ];
 
   return (
-    <div className="slider-cointainer">
+    <div className="slider-cointainer ">
       <div className="detail-slider">
         <img src={h1} alt="" />
         <div className="detail-box">
@@ -90,12 +90,13 @@ const Slider = () => {
         </div>
       </div>
       <div className="slider-swiper">
-        <p className="text-4xl text-center mb-3">Shop More</p>
+        <p className="text-4xl text-center mb-10 ">Shop More</p>
         <div className="sliderShadow">
           <Swiper
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, Pagination, A11y, Autoplay]}
             spaceBetween={30}
             slidesPerView={4}
+            autoplay={{ delay: 3000 }}
             navigation={{ clickable: true }}
           >
             {products.map((product, index) => (
@@ -105,7 +106,7 @@ const Slider = () => {
                   <div className="slider-detail">
                     <p>{product.pname}</p>
                     <span >{product.pdetail}</span>
-                    <span className="text-end`">{product.pprice}</span>
+                    <span className="ml-[160px]">{product.pprice}</span>
                   </div>
                 </div>
               </SwiperSlide>

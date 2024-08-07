@@ -24,11 +24,11 @@ const navData = [
 
 const NavBar = () => {
   return (
-    <div className="navContainer">
+    <div className="navContainer ">
       <div className="Nav">
         <div className="NavHome">
           {navData.map((data, index) => (
-            <Link key={index} to={data.slug} className="NavHomeapp">
+            <Link key={index} to={data.slug} >
               {data.name}
             </Link>
           ))}
