@@ -1,5 +1,5 @@
 import React from 'react'
-import {coll, hp1, hp2, hp3, hp4, p1, p2, p3, p4 } from '../../images/img';
+import {coll, hp1, hp2, hp3, hp4} from '../../images/img';
 
 
 const ProductBox = () => {

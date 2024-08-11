@@ -37,8 +37,8 @@ body {
   box-shadow: 0 1px 5px rgb(202, 200, 200);
 }
 .Nav {
-  position: sticky;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -60,6 +60,36 @@ body {
   outline: none;
 }
 
+.nav-item {
+  position: relative;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav-item:hover .subMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.subMenu a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.subMenu a:hover {
+  background-color: #f0f0f0;
+}
 
 .NavHome a {
   margin: 0 20px;
@@ -158,7 +188,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
-  background-color: #fff;
   margin-bottom: 50px;
 
   .product-box {

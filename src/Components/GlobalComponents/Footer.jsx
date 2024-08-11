@@ -17,7 +17,7 @@ const Footer = () => {
         <Link to={"/AboutUs"} className="font-bold text-xl underline">About Us</Link>
         <Link to="/AboutHerbs">Our Herbs</Link>
         <Link to="/AboutFarm">Our Farms</Link>
-        <Link to="/AboutUs">Herbs Library</Link>
+        <Link to="/HerbsLibarary">Herbs Library</Link>
       </div>
       
       <div className="flex flex-col justify-center">
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="text-center">
           <p className="mt-5 mb-8">© 2022. All Rights Reserved</p>
-          <Link to="/" className="text-3xl mt-8">T-S Herbs</Link>
+          <Link to="/" className="text-3xl mt-8">T&S Herbs</Link>
         </div>
       </div>
       

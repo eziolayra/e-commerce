@@ -9,7 +9,6 @@ const ProductCard = ({img,name,detail}) => {
           <button>View Details</button>
         </div>
       </div>
-
       <div className="product-sub-box">
         <p className="text-2xl border-b-4 pt-2 pb-3">{name}</p>
         <p className="text-lg p-2 ">{detail}</p>

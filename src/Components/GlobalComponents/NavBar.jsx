@@ -1,24 +1,30 @@
 import React from "react";
-import { IoIosHelpCircleOutline, IoMdSearch, IoMdCart } from "react-icons/io";
+import {  IoMdSearch, IoMdCart } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { LiaClipboardListSolid } from "react-icons/lia";
 
 const navData = [
   {
     name: "SHOP",
-    slug: "/shop",
+    linkto: "/shop",
   },
   {
     name: "ABOUT US",
-    slug: "/AboutUs",
+    linkto: "/AboutUs",
+    subMenu: [
+      { name: "Farm", linkto: "/about-us/farm" },
+      { name: "Herbs", linkto: "/about-us/herbs" },
+      { name: "Library", linkto: "/about-us/library" },
+    ],
   },
   {
     name: "CONTACT US",
-    slug: "/contact-us",
+    linkto: "/contact-us",
   },
   {
     name: "STORES",
-    slug: "/stores",
+    linkto: "/store",
   },
 ];
 
@@ -28,25 +34,25 @@ const NavBar = () => {
       <div className="Nav">
         <div className="NavHome">
           {navData.map((data, index) => (
-            <Link key={index} to={data.slug} >
+            <Link key={index} to={data.linkto} >
               {data.name}
             </Link>
           ))}
         </div>
         <div className="NavLogo text-3xl">
-          <Link to="/">T-S Herbs</Link>
+          <Link to="/">T&S Herbs</Link>
         </div>
         <div className="Nav-logo">
           <div className="nav-logo-search">
             <input type="text" placeholder="Search" />
             <IoMdSearch className="cursor-pointer" />
           </div>
-          <a href="#!">
-            <IoIosHelpCircleOutline />
-          </a>
           <Link to="/login">
             <FaUser />
           </Link>
+          <a href="#!">
+          <LiaClipboardListSolid />
+          </a>
           <a href="#!">
             <IoMdCart />
           </a>

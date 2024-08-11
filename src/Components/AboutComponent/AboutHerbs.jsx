@@ -1,5 +1,6 @@
 import React from "react";
 import { oh1, oh2, oh3, oh4 } from "../../images/img";
+import { Link } from "react-router-dom";
 
 const AboutHerbs = () => {
   return (
@@ -26,7 +27,7 @@ const AboutHerbs = () => {
             laudantium quod.
           </p>
           <button className="ring-2 ring-green-600 p-3 pl-8 pr-8 rounded hover:bg-transparent hover:text-green-600 text-xl bg-green-600 text-white cursor-pointer">
-            Visit Our Farm
+            <Link to={"/AboutFarm"}>Visit Our Farm</Link>
           </button>
         </div>
         <img src={oh3} alt="/" className="w-1/2 object-cover" />
@@ -67,7 +68,7 @@ const AboutHerbs = () => {
             of various herbs, their growth patterns, and more.
           </p>
           <button className="ring-2 ring-green-600 p-3 pl-8 pr-8 rounded hover:bg-transparent text-xl bg-green-600 text-white cursor-pointer">
-            Visit Library{" "}
+            <Link to={"/HerbsLibarary"}>Visit Library</Link>
           </button>
         </div>
       </div>
