@@ -12,6 +12,8 @@ import AboutFarm from "./Components/AboutComponent/AboutFarm";
 import HerbsLibarary from "./Components/AboutComponent/HerbsLibarary";
 import Shop from "./Components/ShopComponents/Shop";
 import Store from "./Pages/Store";
+import Contact from "./Pages/Contact";
+import OurHerbsProduct from "./Components/ProductsDetails/OurHerbsProduct";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/HerbsLibarary" element={<HerbsLibarary />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/product/:id" element={<OurHerbsProduct />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

@@ -50,8 +50,8 @@ const ProductBox = () => {
                 <img src={data.image} alt={data.name} />
                 <p className='text-2xl'>{data.name}</p>
                 <p>
-                  {data.detail}{" "}
-                  <span className="subimg-price">{data.price}</span>
+                  {data.detail}
+                  <span className="subimg-price pl-5">{data.price}</span>
                 </p>
                 <div className="subimg-button">
                   <button>Shop Now</button>

@@ -50,12 +50,12 @@ const NavBar = () => {
           <Link to="/login">
             <FaUser />
           </Link>
-          <a href="#!">
+          <Link to="#!">
           <LiaClipboardListSolid />
-          </a>
-          <a href="#!">
+          </Link>
+          <Link to="#!">
             <IoMdCart />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -52,8 +52,8 @@ const HomePage = () => {
               <img src={data.image} alt="" className="HomePage-image" />
               <div className="HomePage-textbox">
                 <div>
-                  <strong>{data.title}</strong>
-                  <p>{data.description}</p>
+                  <strong className="text-center ">{data.title}</strong>
+                  <p className="h-[300px] overflow-hidden">{data.description}</p>
                 </div>
                 <button>Learn More</button>
               </div>
